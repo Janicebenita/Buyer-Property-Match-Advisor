@@ -1,0 +1,9 @@
+spec_version: "0.1.0"
+name: buyer-property-match-advisor
+version: 1.0.0
+description: Matches buyer-stated property preferences with available listings and explains the trade-offs.
+author: Janice Benita F
+runtime:
+  max_turns: 20
+  timeout: 120
+tags: [real-estate, buyer, property-search, recommendations]
