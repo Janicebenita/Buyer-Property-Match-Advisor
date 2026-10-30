@@ -22,6 +22,6 @@ Uncertainty is shown for unverified or missing property facts. The buyer and an 
 
 ## Implementation in This Repository
 
-This repository is a declarative OpenGAP worker package: `agent.yaml` defines its interface and constraints, `SOUL.md` defines its operating principles, and this document explains its matching rationale and review boundaries. `README.md` provides the supported use case and reviewer-facing setup information.
+`agent.py` implements `match_property(criteria, listing)`. It compares price with the buyer's maximum, bedrooms with the declared minimum, listing location with preferred locations, and features with must-haves; it retains the compared values as evidence, calculates a four-check score, lists unmet trade-offs, reports evidence coverage, and requires human review. `test_agent.py` verifies that an over-budget trade-off remains visible.
 
-No live listing feed, valuation model, transaction API, or autonomous purchase action is implemented. A conforming host must supply the buyer requirements and listing evidence, expose the comparison to the user, and require human verification before any consequential step.
+No live listing feed, valuation model, transaction API, or autonomous purchase action is implemented. The caller supplies both records and a human verifies all consequential steps.
