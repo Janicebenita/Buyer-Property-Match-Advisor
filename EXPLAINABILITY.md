@@ -19,3 +19,9 @@ A limitation is that listings can be stale, incomplete, or inaccurate. The agent
 ## Uncertainty and Human Review
 
 Uncertainty is shown for unverified or missing property facts. The buyer and an authorized professional should confirm all important information before proceeding.
+
+## Implementation in This Repository
+
+This repository is a declarative OpenGAP worker package: `agent.yaml` defines its interface and constraints, `SOUL.md` defines its operating principles, and this document explains its matching rationale and review boundaries. `README.md` provides the supported use case and reviewer-facing setup information.
+
+No live listing feed, valuation model, transaction API, or autonomous purchase action is implemented. A conforming host must supply the buyer requirements and listing evidence, expose the comparison to the user, and require human verification before any consequential step.
